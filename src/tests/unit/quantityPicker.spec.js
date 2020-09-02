@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils';
 import quantityPicker from '@/components/quantityPicker.vue';
 
 it('should increase number by one when clicking "+"-button', async () => {
-    const expected = 1;
+    const expected = 2;
 
     let wrapper = shallowMount(quantityPicker);
     let button = wrapper.find('.increase-button');
@@ -58,7 +58,7 @@ it('should emit the current number every time it changes', async () => {
     await decButton.trigger('click');
     await incButton.trigger('click');
 
-    let actual = wrapper.emitted('emitSize').length;
+    let actual = wrapper.emitted('emitQuantity').length;
 
     expect(actual).toBe(expected);
 })
@@ -68,7 +68,7 @@ it('last emit should have value of the current quantity', async () => {
     let incButton = wrapper.find('.increase-button');
     let decButton = wrapper.find('.decrease-button');
 
-    const expected = 3;
+    const expected = [3];
 
     await incButton.trigger('click');
     await incButton.trigger('click');
@@ -77,7 +77,7 @@ it('last emit should have value of the current quantity', async () => {
 
     await wrapper.vm.$nextTick();
 
-    let actual = wrapper.emitted('emitQuantoty')[3];
+    let actual = wrapper.emitted('emitQuantity')[3];
 
     expect(actual).toEqual(expected);
 })
@@ -94,11 +94,13 @@ it('should display number "1" on load', async () => {
 })
 
 it('if given a quantity prop on load it should display the prop data as the number', async () => {
-    let wrapper = shallowMount(quantityPicker);
     let expectedQuantity = 3;
+    let wrapper = shallowMount(quantityPicker, {
+            propsData: {
+                recievedQuantity: expectedQuantity
+            }}
+        );
     
-    await wrapper.setProps({ quantity: expectedQuantity })
-
     const expected = expectedQuantity;
     
     let numberContainer = wrapper.find('p');
