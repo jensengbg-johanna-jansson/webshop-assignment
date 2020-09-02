@@ -79,7 +79,7 @@ it('last emit should have value of latest clicked label', async () => {
     let radioButtonsArray = wrapper.findAll('input[type="radio"]');
 
     const lastClickedItem = 1;
-    const expected = radioButtonsArray.at(lastClickedItem).attributes('value');
+    const expected = [radioButtonsArray.at(lastClickedItem).attributes('value')];
 
     let radioLabelsArray = wrapper.findAll('label');
 
@@ -89,7 +89,7 @@ it('last emit should have value of latest clicked label', async () => {
 
     await wrapper.vm.$nextTick();
 
-    let actual = wrapper.emitted('emitSize')[-1];
+    let actual = wrapper.emitted('emitSize')[2];
 
-    expect(actual).toBe(expected);
+    expect(actual).toEqual(expected);
 })

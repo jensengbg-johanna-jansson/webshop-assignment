@@ -24,6 +24,11 @@ export default {
         clickEvent(size) {
             this.selected = size;
         }
+    },
+    watch: {
+        selectedSize: function() {
+            this.$emit('emitSize', this.selectedSize);
+        }
     }
 }
 </script>
