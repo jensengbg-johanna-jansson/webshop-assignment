@@ -15,7 +15,7 @@ it('should add the class "selectedSize" to the first label when clicked', async(
     expect(actual).toBe(expected);
 })
 
-it('should remove class "selectedSize" of the first option when another is clicked', async() => {
+it('should remove class "selectedSize" of the third option when another is clicked', async() => {
     const expected = false;
     
     let wrapper = shallowMount(sizePicker);
@@ -38,7 +38,7 @@ it('should set radiobutton of second label to "checked" when second label is cli
 
     await radioLabelsArray.at(1).trigger('click');
     
-    let actual = radioButtonsArray.at(1).element.selected;
+    let actual = radioButtonsArray.at(1).element.checked;
 
     expect(actual).toBe(expected);
 })
@@ -53,7 +53,7 @@ it('should set value of "selectedSize" to value of first radiobutton when first 
 
     await radioLabelsArray.at(0).trigger('click');
 
-    let actual = wrapper.props('selectedSize');
+    let actual = wrapper.vm.selectedSize;
 
     expect(actual).toBe(expected);
 })
