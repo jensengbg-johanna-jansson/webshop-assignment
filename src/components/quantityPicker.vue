@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <button class="decrease-button" @click="decreaseQuantity">-</button>
-        <p>{{ quantity }}</p>
-        <button class="increase-button" @click="increaseQuantity">+</button>
+    <div class="quantity-picker">
+        <button class="decrease-button quantity-picker-button" @click="decreaseQuantity">-</button>
+        <p class="quantity-picker-text">{{ quantity }}</p>
+        <button class="increase-button quantity-picker-button" @click="increaseQuantity">+</button>
     </div>
 </template>
 
@@ -46,6 +46,27 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+    .quantity-picker {
+        display: flex;
+        align-items: center;
 
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222222;
+            border: 1px solid #222222; 
+            border-radius: .2rem;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+        &-text {
+            font-size: 1rem;
+            padding: 0 1.5rem;
+            color: #444444;
+        }
+    }
 </style>
