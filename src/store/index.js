@@ -8,42 +8,52 @@ export default new Vuex.Store({
     products: [
       {
         name: '"Mister Parka Jr." parka',
-        img: ""
+        img: '',
       },
       {
-        name: '"Mister Parke Jr." parka'
+        name: '"Mister Parke Jr." parka',
       },
       {
         name: 'Sporty T-shirt',
-        img: ''
+        img: '',
       },
       {
         name: 'Sporty parka',
-        img: ''
+        img: '',
       },
       {
         name: 'Bug stick parka',
-        img: ''
+        img: '',
       },
       {
         name: 'Bug stick T-shirt',
-        img: ''
+        img: '',
       },
       {
         name: 'Rick roll T-shirt',
-        img: ''
+        img: '',
       },
       {
         name: 'Rick roll parka',
-        img: ''
-      }
+        img: '',
+      },
     ],
-    cart: []
+    cart: [
+      {
+        name: 'Bug stick parka',
+        img: '',
+        price: 299,
+        size: 'M',
+      },
+      {
+        name: 'Bug stick T-shirt',
+        img: '',
+        price: 499,
+        size: 'L',
+      },
+    ],
   },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+  mutations: {},
+  actions: {},
+  modules: {},
 })
