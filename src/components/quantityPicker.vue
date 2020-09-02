@@ -66,6 +66,11 @@ export default {
             font-size: 1rem;
             color: #ffffff;
         }
+        &-button:hover {
+            background: #ffffff;
+            color: #444444;
+            cursor: pointer;
+        }
         &-text {
             font-size: 1rem;
             padding: 0 1.5rem;
