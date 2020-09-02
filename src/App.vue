@@ -1,14 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
+    <sizePicker />
   </div>
 </template>
 
+<script>
+import sizePicker from '@/components/sizePicker.vue';
+export default {
+  components: {
+    sizePicker
+  }
+}
+</script>
+
 <style lang="scss">
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
