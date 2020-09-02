@@ -70,7 +70,9 @@
       ".*\\.(vue)$": "vue-jest",
       "^.+\\.js$": "babel-jest"
     },
-    "transformIgnorePatterns": ["/node_modules/(?!vue-awesome)"],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!vue-awesome)"
+    ],
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1"
     }
