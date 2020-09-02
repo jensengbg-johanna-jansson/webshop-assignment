@@ -29,6 +29,13 @@ export default {
             } else {
                 this.quantity = newQuantity;
             }
+        },
+        setOnLoadQuantity() {
+            if(this.recievedQuantity) {
+                this.quantity = this.recievedQuantity;
+            } else {
+                this.quantity = 1;
+            }
         }
     },
     watch: {
@@ -37,11 +44,7 @@ export default {
         }
     },
     created() {
-        if(this.recievedQuantity) {
-            this.quantity = this.recievedQuantity;
-        } else {
-            this.quantity = 1;
-        }
+        this.setOnLoadQuantity();
     }
 }
 </script>
