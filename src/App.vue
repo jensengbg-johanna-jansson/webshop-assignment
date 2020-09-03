@@ -2,14 +2,17 @@
   <div id="app">
     <router-view/>
     <quantityPicker />
+    <sizePicker />
   </div>
 </template>
 
 <script>
 import quantityPicker from '@/components/quantityPicker.vue';
+import sizePicker from '@/components/sizePicker.vue';
 export default {
   components: {
-    quantityPicker
+    quantityPicker,
+    sizePicker
   }
 }
 </script>
