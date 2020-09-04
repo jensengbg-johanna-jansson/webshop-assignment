@@ -37,3 +37,18 @@ it("should show the products images", () => {
 })
 
 
+it("Should show a page with all products", () => {
+    const expectedName = "Product Page"
+    const wrapper = shallowMount(ProductPage);
+    let name = wrapper.find("title")
+    let content = name.text();
+    expect(content).toBe(expectedName)
+
+})
+
+
+//Dessa 3 namn, image och show a page with all products går hand i hand med varandra
+
+
+
+
