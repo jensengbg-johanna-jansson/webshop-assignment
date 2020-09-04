@@ -41,8 +41,14 @@ export default new Vuex.Store({
     cart: []
   },
   mutations: {
+    addProductToCart (state, payload) {
+        state.cart.push(payload);
+    }
   },
   actions: {
+    commitProductToCart ({commit}, product) {
+      commit('addProductToCart', product);
+    }
   },
   modules: {
   }
