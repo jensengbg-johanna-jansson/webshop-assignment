@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     deleteFunc: function(prod) {
-      console.log(prod)
       this.productToDelete = prod
       console.log('This is the deleted product', this.productToDelete)
     },
@@ -33,6 +32,36 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@mixin flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.product {
+  width: 20rem;
+  height: 20rem;
+  background: #eee;
+  @include flex();
 
-/* name: 'First test product', size: 'M', price: 299, img: '', */
+  section {
+    width: 50%;
+    height: 100%;
+  }
+
+  .infoCont {
+    @include flex();
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0.2rem 0rem;
+    }
+  }
+}
+</style>
