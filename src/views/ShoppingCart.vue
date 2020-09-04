@@ -3,6 +3,8 @@
     <h1>Shopping cart</h1>
     <section class="productSection">
       <Product />
+      <Product />
+      <Product />
     </section>
   </div>
 </template>
@@ -22,11 +24,19 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   h1 {
     margin: 1rem 0rem 4rem 0rem;
+  }
+
+  .productSection {
+    margin-top: auto;
+    background: red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
 </style>
