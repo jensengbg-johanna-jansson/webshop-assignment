@@ -68,14 +68,10 @@ export default {
                     isValid = false;
                 }
             }
-            console.log(isValid);
-            console.log(productToCartvalues);
             return isValid;
         },
         isInCart (item) {
-            console.log(this.cartItems);
             for (let i = 0; i < this.cartItems.length; i++) {
-                console.log(this.cartItems[i]);
                 if (this.cartItems[i] === item) {
                     return true;
                 } else {
@@ -104,8 +100,6 @@ export default {
                     }, 1500);
                 }
             } else {
-                console.log('product is not valid');
-                console.log(this.productToCart);
                 this.showErrorMsg = true;
                 let t = this;
                 setTimeout(function () {

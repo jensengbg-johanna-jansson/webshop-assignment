@@ -77,7 +77,7 @@ it('should commit a mutation with a payload that corresponds to the currently se
 
     let actual = actions.commitProductToCart.mock.calls[0][1];
 
-    expect(actual).toBe(expected);
+    expect(actual).toStrictEqual(expected);
 })
 
 it('should display a success message if the $store.state.cart data should include the payload data after clicking "Continue"-button', async () => {
