@@ -1,21 +1,8 @@
 <template>
   <div id="app">
     <router-view/>
-    <quantityPicker />
-    <sizePicker />
   </div>
 </template>
-
-<script>
-import quantityPicker from '@/components/quantityPicker.vue';
-import sizePicker from '@/components/sizePicker.vue';
-export default {
-  components: {
-    quantityPicker,
-    sizePicker
-  }
-}
-</script>
 
 <style lang="scss">
 * {
@@ -30,6 +17,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #nav {

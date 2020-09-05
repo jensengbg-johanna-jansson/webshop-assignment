@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import ProductDetailsPage from '@/views/ProductDetailsPage.vue'
 
 Vue.use(VueRouter)
 
@@ -7,6 +8,11 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
+  },
+  {
+    path: '/product',
+    name: 'Product',
+    component: ProductDetailsPage
   }
 ]
 
