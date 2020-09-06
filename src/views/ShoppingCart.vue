@@ -25,23 +25,25 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   h1 {
-    margin: 1rem 0rem 4rem 0rem;
+    margin: 3rem 0rem 3rem 0rem;
   }
 
   .productSection {
+    width: 100%;
     margin-top: auto;
-    background: red;
+    margin: 3rem 0rem 2rem 0rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 </style>
