@@ -31,7 +31,6 @@ export default {
   methods: {
     deleteFunc: function(prod) {
       this.productToDelete = prod
-      console.log('This is the deleted product', this.productToDelete)
     },
   },
 }
@@ -46,11 +45,17 @@ export default {
 .product {
   width: 24rem;
   height: 18rem;
+  margin: 2rem;
   @include flex();
 
   section {
     width: 50%;
     height: 100%;
+    margin: 0rem 0.5rem;
+  }
+
+  .imgCont {
+    background: #aaa;
   }
 
   .infoCont {
