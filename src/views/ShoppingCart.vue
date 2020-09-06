@@ -2,7 +2,7 @@
   <div class="wrapper">
     <h1>Shopping cart</h1>
     <section class="productSection">
-      <Product />
+      <Product @deleteProduct="deleteProductHandler" />
       <Product />
       <Product />
     </section>
@@ -14,6 +14,11 @@ import Product from '@/components/Product.vue'
 export default {
   components: {
     Product,
+  },
+  methods: {
+    deleteProductHandler: function(prod) {
+      console.log(prod)
+    },
   },
 }
 </script>
