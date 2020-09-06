@@ -1,13 +1,18 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
-import Product from '@/components/Product.vue'
+import ProductList from '@/components/ProductList.vue'
 
 describe('Delete product', () => {
-  it('Should return the objects when clicked', async () => {
-    const wrapper = shallowMount(Product)
-    const expected = wrapper.vm.product
-    const deleteBtn = wrapper.find('button')
+  it('Should delete the clicked item', async () => {
+    const wrapper = shallowMount(ProductList)
+    const deleteBtn = wrapper.find('.deleteBtn')
     await deleteBtn.trigger('click')
-    const actuall = wrapper.vm.productToDelete
+    const productToDelete = wrapper.vm.productToDelete
+
+    const cartItems = wrapper.vm.cartItems
+    console.log(cartItems.indexOf(productToDelete))
+
+    const expected = -1
+    const actuall = cartItems.indexOf(productToDelete)
     expect(expected).toBe(actuall)
   })
 })
