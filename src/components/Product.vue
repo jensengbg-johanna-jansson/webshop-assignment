@@ -31,7 +31,7 @@ export default {
   methods: {
     deleteFunc: function(prod) {
       this.productToDelete = prod
-      console.log('This is the deleted product', this.productToDelete)
+      this.$emit('deleteProduct', prod)
     },
   },
 }
