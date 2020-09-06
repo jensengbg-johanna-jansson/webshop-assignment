@@ -1,21 +1,15 @@
 <template>
   <div class="wrapper">
     <h1>Shopping cart</h1>
-    <section class="productSection">
-      <Product />
-      <Product />
-      <Product />
-    </section>
+    <section class="productSection"></section>
     <TotalValue />
   </div>
 </template>
 
 <script>
-import Product from '@/components/Product.vue'
 import TotalValue from '@/components/TotalValue.vue'
 export default {
   components: {
-    Product,
     TotalValue,
   },
 }
