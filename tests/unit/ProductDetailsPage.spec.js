@@ -23,8 +23,15 @@ describe('Product details page tests', () => {
 it('should display the product"s name in the product name heading', async () => {
     const expected = mockProductData.name;
 
-    let wrapper = shallowMount(ProductDetailsPage);
-    await wrapper.setData({ product: mockProductData });
+    let store = new Vuex.Store({});
+
+    let wrapper = shallowMount(ProductDetailsPage, {
+        computed: {
+            productData: () => { return mockProductData }
+          },
+          store,
+          localVue
+    });
     let nameHeading = wrapper.find('.product-name');
 
     let actual = nameHeading.text();
@@ -35,8 +42,15 @@ it('should display the product"s name in the product name heading', async () => 
 it('should display the product"s price in the product price textbox', async () => {
     const expected = '299 SEK';
 
-    let wrapper = shallowMount(ProductDetailsPage);
-    await wrapper.setData({ product: mockProductData });
+    let store = new Vuex.Store({});
+
+    let wrapper = shallowMount(ProductDetailsPage, {
+        computed: {
+            productData: () => { return mockProductData }
+          },
+          store,
+          localVue
+    });
     let price = wrapper.find('.product-price');
 
     let actual = price.text();
@@ -47,8 +61,15 @@ it('should display the product"s price in the product price textbox', async () =
 it('should display the product"s image in the product img-tag', async () => {
     const expected = mockProductData.img;
     
-    let wrapper = shallowMount(ProductDetailsPage);
-    await wrapper.setData({ product: mockProductData });
+    let store = new Vuex.Store({});
+
+    let wrapper = shallowMount(ProductDetailsPage, {
+        computed: {
+            productData: () => { return mockProductData }
+          },
+          store,
+          localVue
+    });
     let image = wrapper.find('.product-image');
 
     let actual = image.attributes('src');
@@ -67,6 +88,9 @@ it('should commit a mutation with a payload that corresponds to the currently se
     });
 
     let wrapper = shallowMount(ProductDetailsPage, {
+        computed: {
+            productData: () => { return mockProductData }
+        },
         store,
         localVue
     });
@@ -80,48 +104,44 @@ it('should commit a mutation with a payload that corresponds to the currently se
     expect(actual).toStrictEqual(expected);
 })
 
-it('should display a success message if the $store.state.cart data should include the payload data after clicking "Continue"-button', async () => {
+it('should display a success message if "showSuccessMsg" is true', async () => {
     const expected = true;
 
     let store = new Vuex.Store({});
 
-    // Läs in wrapper med en computed property
     let wrapper = shallowMount(ProductDetailsPage, {
         computed: {
-            // Sätt värdet på computed propertyn till 'testValue'
-            cartItems: () => ['testValue']
+            productData: () => { return mockProductData }       
           },
           store,
           localVue
     });
     
-    let addToCartButton = wrapper.find('.add-to-cart-button');
     let successMsg = wrapper.find('.success-message');
-    await wrapper.setData({ productToCart: 'testValue' });
-    await addToCartButton.trigger('click');
-
+    await wrapper.setData({
+        showSuccessMsg: true
+    });
     let actual = successMsg.element.style.display !== 'none';
 
     expect(actual).toBe(expected);
 })
 
-it('should display an error message if the $store.state.cart data does not include the payload data after clicking "Continue"-button', async () => {
+it('should display an error message if the "shoeErrorMsg" is true', async () => {
     const expected = true;
     
     let store = new Vuex.Store({});
 
     let wrapper = shallowMount(ProductDetailsPage, {
         computed: {
-            cartItems: () => ['testValue']
+            productData: () => { return mockProductData }       
           },
           store,
           localVue
     });
-    let addToCartButton = wrapper.find('.add-to-cart-button');
     let errorMsg = wrapper.find('.error-message');
-    const mockPayload = 'differentTestValue';
-    await wrapper.setData({ productToCart: mockPayload });
-    await addToCartButton.trigger('click');
+    await wrapper.setData({
+        showErrorMsg: true
+    });
 
     let actual = errorMsg.element.style.display !== 'none';
 

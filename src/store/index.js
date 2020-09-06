@@ -7,35 +7,52 @@ export default new Vuex.Store({
   state: {
     products: [
       {
-        name: '"Mister Parka Jr." parka',
-        img: ""
+        id: '1',
+        name: 'A mock parka',
+        price: 299,
+        img: "https://picsum.photos/id/237/1080/720"
       },
       {
-        name: '"Mister Parke Jr." parka'
+        id: '2',
+        name: 'A mock T-shirt',
+        price: 199,
+        img: 'https://picsum.photos/id/237/1080/720'
       },
       {
+        id: '3',
         name: 'Sporty T-shirt',
-        img: ''
+        price: 199,
+        img: 'https://picsum.photos/id/237/1080/720'
       },
       {
+        id: '4',
         name: 'Sporty parka',
-        img: ''
+        price: 299,
+        img: 'https://picsum.photos/id/237/1080/720'
       },
       {
+        id: '5',
         name: 'Bug stick parka',
-        img: ''
+        price: 299,
+        img: 'https://picsum.photos/id/237/1080/720'
       },
       {
+        id: '6',
         name: 'Bug stick T-shirt',
-        img: ''
+        price: 199,
+        img: 'https://picsum.photos/id/237/1080/720'
       },
       {
+        id: '7',
         name: 'Rick roll T-shirt',
-        img: ''
+        price: 199,
+        img: 'https://picsum.photos/id/237/1080/720'
       },
       {
+        id: '8',
         name: 'Rick roll parka',
-        img: ''
+        price: 299,
+        img: 'https://picsum.photos/id/237/1080/720'
       }
     ],
     cart: []

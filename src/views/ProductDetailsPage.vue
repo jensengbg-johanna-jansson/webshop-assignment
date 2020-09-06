@@ -1,9 +1,9 @@
 <template>
     <section class="product-page">
-        <img :src="product.img" class="product-image" alt="">
+        <img :src="productData.img" class="product-image" alt="">
         <article class="product-details">
-            <h2 class="product-name">{{ product.name }}</h2>
-            <p class="product-price">{{ product.price }} SEK</p>
+            <h2 class="product-name">{{ productData.name }}</h2>
+            <p class="product-price">{{ productData.price }} SEK</p>
             <h3 class="product-small-heading">Choose a size</h3>
             <sizePicker class="product-size" @emitSize="updateSize" />
             <quantityPicker class="product-quantity" @emitQuantity="updateQuantity" />
@@ -32,11 +32,6 @@ export default {
     },
     data() {
         return {
-            product: {
-                name: 'A mock T-shirt',
-                price: 299,
-                img: 'https://picsum.photos/id/237/1080/720'
-            },
             productToCart: '',
             showSuccessMsg: false,
             showErrorMsg: false
@@ -45,8 +40,8 @@ export default {
     methods: {
         setProductToCart() {
             this.productToCart = {
-                name: this.product.name,
-                price: this.product.price,
+                name: this.productData.name,
+                price: this.productData.price,
                 size: null,
                 quantity: null
             }
@@ -109,6 +104,11 @@ export default {
         }
     },
     computed: {
+        productData () {
+            let storeProducts = this.$store.state.products;
+            let productId = this.$route.params.id;
+            return storeProducts.find( ({ id }) => id === productId );
+        },
         cartItems () {
             return this.$store.state.cart;            
         }

@@ -10,7 +10,7 @@ Vue.use(VueRouter)
     name: 'Home',
   },
   {
-    path: '/product',
+    path: '/product/:id',
     name: 'Product',
     component: ProductDetailsPage
   }
