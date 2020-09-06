@@ -1,24 +1,15 @@
 <template>
   <div class="wrapper">
     <h1>Shopping cart</h1>
-    <section class="productSection">
-      <Product @deleteProduct="deleteProductHandler" />
-      <Product />
-      <Product />
-    </section>
+    <ProductList />
   </div>
 </template>
 
 <script>
-import Product from '@/components/Product.vue'
+import ProductList from '@/components/ProductList.vue'
 export default {
   components: {
-    Product,
-  },
-  methods: {
-    deleteProductHandler: function(prod) {
-      console.log(prod)
-    },
+    ProductList,
   },
 }
 </script>
