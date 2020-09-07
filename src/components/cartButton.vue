@@ -10,7 +10,11 @@ export default {
     computed: {
         numberOfItemsInCart() {
             let cart = this.$store.state.cart;
-            return cart.length;
+            if(Array.isArray(cart)) {
+                return cart.length;
+            } else {
+                return 0;
+            }
         }
     }
 }
