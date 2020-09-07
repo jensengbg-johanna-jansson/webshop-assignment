@@ -1,5 +1,6 @@
 <template>
-    <button>
+    <button class="cart-button">
+        <img src="@/assets/cart_icon.png" alt="Cart button">
         <span class="cart-button-number">{{ numberOfItemsInCart }}</span>
     </button>
 </template>
@@ -20,6 +21,29 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+    .cart-button {
+        border: none;
+        position: relative;
+        background: none;
 
+        &-number {
+            position: absolute;
+            right: -0.9rem;
+            top: -0.9rem;
+            background: #DB4D4D;
+            color: #ffffff;
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 2rem;
+            font-size: 0.7rem;
+        }
+    }
+    .cart-button:hover {
+        cursor: pointer;
+    }
 </style>
