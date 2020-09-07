@@ -12,10 +12,9 @@
 export default {
     name: 'Product',
 
-    props: [
-        product,
-
-    ]
+    props: {
+        product: Object
+    }
 }
 </script>
 
