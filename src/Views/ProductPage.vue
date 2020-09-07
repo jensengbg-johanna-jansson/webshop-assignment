@@ -27,6 +27,12 @@ export default {
 
     components: {
         Product,
+    },
+
+    computed: {
+        addProducts() {
+       return this.$store.state.products
+        }
     }
 
 
