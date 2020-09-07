@@ -1,5 +1,6 @@
 import Vuex from 'vuex';
-import { shallowMount, createLocalVue } from '@vue/test-utils';import cartButton from '@/components/cartButton.vue';
+import { shallowMount, createLocalVue } from '@vue/test-utils';
+import cartButton from '@/components/cartButton.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -8,7 +9,7 @@ describe('Header cart button tests', () => {
     it('should display the number of items that is currently in cart', () => {
         const expected = 1;
 
-        let wrapper = shallowMount(ProductDetailsPage, {
+        let wrapper = shallowMount(cartButton, {
             computed: {
                 numberOfItemsInCart: () => { return 1 }
               },
