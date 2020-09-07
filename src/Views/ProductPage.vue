@@ -10,15 +10,22 @@
     <h2 id="price">Price</h2>
         
 
-        <div class="images">
-    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-    </div>
-    <div class="pnames">
-    <h2 id="p1">T-Shirt</h2>
+    <ul id="images">
+    <img id="img1" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+    <img id="img2" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+    <img id="img3" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+    </ul>
+
+    <ul id="pnames">
+        <h2 id="p1">T-Shirt</h2>
     <h2 id="p2">Jeans</h2>
-    </div>
+    </ul>
+
+    <ul id="prices">
+    </ul>
+    
+    
+    
     </main>
 
 
@@ -54,10 +61,12 @@ img {
     
 }
 
-.images {
+#images {
     grid-row: 2/4;
     display: grid;
-    align-self: center;
+    grid-template-rows: repeat(4,1fr);
+    
+    
 
     
 }
@@ -78,15 +87,27 @@ img {
     justify-self: center;
 }
 
-.pnames {
+#pnames {
     
     display: grid;
+    grid-template-rows: repeat(4,1fr);
     grid-row: 2/4;
+    justify-content: center;
+    
 }
 
-#p2 {
+
+
+img1 {
+    grid-row: 2;
+}
+
+img2 {
+    grid-row: 3;
+}
+
+img3 {
     grid-row: 4;
-    grid-column: 2;
 }
     
 
