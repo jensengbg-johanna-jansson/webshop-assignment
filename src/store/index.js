@@ -12,7 +12,7 @@ export default new Vuex.Store({
         price: 299
       },
       {
-        name: '"Mister Parke Jr." parka',
+        name: '"Mister Parke Jr." T-shirt',
         img: '',
         price: 199
       },
@@ -44,15 +44,11 @@ export default new Vuex.Store({
       {
         name: 'Rick roll parka',
         img: '',
-        price: 299
-      }
+      },
     ],
-    cart: []
+    cart: [],
   },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+  mutations: {},
+  actions: {},
+  modules: {},
 })
