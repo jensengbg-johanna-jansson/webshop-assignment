@@ -6,11 +6,7 @@
 </template>
 
 <script>
-import cartButton from '@/components/cartButton.vue'
 export default {
-  components: {
-    cartButton
-  }
 }
 </script>
 
@@ -25,7 +21,11 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #222;
+  text-align: center;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 * {
