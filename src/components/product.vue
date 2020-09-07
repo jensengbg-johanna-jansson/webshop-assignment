@@ -1,19 +1,22 @@
 <template>
-    <article class="product">
+    <article class="product" @click="goToProduct">
         <img class="productImage" :src="product.img">
         <h2 class="productName">{{ product.name }}</h2>
         <h2 class="price">{{ product.price }}</h2>
-
-
     </article>
 </template>
 
 <script>
 export default {
     name: 'Product',
-
     props: {
         product: Object
+    },
+    methods: {
+        goToProduct() {
+            let productId = this.product.id;
+            this.$router.push({ path: `/product/${ productId }` });
+        }
     }
 }
 </script>
