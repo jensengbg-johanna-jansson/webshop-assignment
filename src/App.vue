@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <router-view/>
-    <sizePicker />
+    <router-view />
   </div>
 </template>
 
 <script>
-import sizePicker from '@/components/sizePicker.vue';
 export default {
-  components: {
-    sizePicker
-  }
 }
 </script>
 
@@ -25,20 +20,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #222;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+* {
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
 }
 </style>
