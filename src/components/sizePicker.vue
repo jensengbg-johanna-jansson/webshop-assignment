@@ -54,9 +54,14 @@ export default {
         &-label:last-child {
             margin-right: 0;
         }
+        &-label:hover {
+            background: #444444;
+            color: #ffffff;
+            cursor: pointer;
+        }
 
         .selectedSize {
-            background: #444444;
+            background: #222222;
             color: #ffffff;
         }
     }
