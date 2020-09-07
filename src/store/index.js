@@ -67,6 +67,7 @@ export default new Vuex.Store({
       commit('addProductToCart', product);
     }
   },
-  modules: {
-  }
+  mutations: {},
+  actions: {},
+  modules: {},
 })

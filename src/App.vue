@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script>
+export default {
+}
+</script>
 
 <style lang="scss">
 * {
@@ -22,16 +27,9 @@
   align-items: center;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+* {
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
 }
 </style>
