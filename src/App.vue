@@ -4,7 +4,22 @@
   </div>
 </template>
 
+<script>
+import quantityPicker from '@/components/quantityPicker.vue';
+export default {
+  components: {
+    quantityPicker
+  }
+}
+</script>
+
 <style lang="scss">
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
