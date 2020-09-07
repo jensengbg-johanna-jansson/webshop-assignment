@@ -1,11 +1,16 @@
 <template>
   <div id="app">
+    <cartButton />
     <router-view />
   </div>
 </template>
 
 <script>
+import cartButton from '@/components/cartButton.vue'
 export default {
+  components: {
+    cartButton
+  }
 }
 </script>
 

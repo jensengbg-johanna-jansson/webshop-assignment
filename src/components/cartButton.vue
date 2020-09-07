@@ -1,5 +1,5 @@
 <template>
-    <button class="cart-button">
+    <button class="cart-button" @click="goToCart">
         <img src="@/assets/cart_icon.png" alt="Cart button">
         <span class="cart-button-number">{{ numberOfItemsInCart }}</span>
     </button>
@@ -16,6 +16,11 @@ export default {
             } else {
                 return 0;
             }
+        }
+    },
+    methods: {
+        goToCart () {
+            this.$router.push({ path: 'shopping-cart' });
         }
     }
 }
