@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import ProductPage from '@/components/ProductPage.vue'
+import ProductPage from '@/Views/ProductPage.vue'
 
 /*
 it("should display the prices when visiting the view", () => {
