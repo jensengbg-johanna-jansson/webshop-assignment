@@ -1,8 +1,8 @@
 <template>
     <article class="product">
-        <img class="productImage" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-        <h2 class="productName">T-Shirt</h2>
-        <h2 class="price">Price</h2>
+        <img class="productImage" :src="product.img">
+        <h2 class="productName">{{ product.name }}</h2>
+        <h2 class="price">{{ product.price }}</h2>
 
 
     </article>
