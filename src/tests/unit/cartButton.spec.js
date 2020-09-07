@@ -26,13 +26,15 @@ describe('Header cart button tests', () => {
     it('shoudl display "0" if "numberOfItemsInCart" is not a number', () => {
         const expected = '0';
         
-        let store = new Vuex.Store({});
         let wrapper = shallowMount(cartButton, {
-            computed: {
-                numberOfItemsInCart: () => { return undefined }
-              },
-              store,
-              localVue
+            mocks: {
+              $store: {
+                state: {
+                  cart: undefined
+                }
+              }
+            },
+            localVue
         });
         let cartButtonNumber = wrapper.find('.cart-button-number');
 
