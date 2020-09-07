@@ -6,9 +6,10 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('Header cart button tests', () => { 
-    it('should display the number of items that is currently in cart', () => {
-        const expected = 1;
-
+    it('should display the number of computed property "numberOfItemsInCart"', () => {
+        const expected = '1';
+        
+        let store = new Vuex.Store({});
         let wrapper = shallowMount(cartButton, {
             computed: {
                 numberOfItemsInCart: () => { return 1 }
