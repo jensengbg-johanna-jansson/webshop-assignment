@@ -5,6 +5,8 @@
     <h1>Product Page</h1>
     </header>
     <main>
+
+        <Product/>
         
     <h2 id="productName">Product name</h2>
     <h2 id="price">Price</h2>
@@ -38,8 +40,16 @@
 </template>
 
 <script>
+import { component } from 'vue/types/umd'
+import Product from '../components/product'
 export default {
-    name: 'ProductPage'
+    name: 'ProductPage',
+
+    components: {
+        Product,
+    }
+
+
 }
 </script>
 
