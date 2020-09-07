@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <cartButton />
+    <mainHeader />
     <router-view />
   </div>
 </template>
 
 <script>
+import mainHeader from '@/components/mainHeader.vue';
+
 export default {
+  components: {
+    mainHeader
+  }
 }
 </script>
 
