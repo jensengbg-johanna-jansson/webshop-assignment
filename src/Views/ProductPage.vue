@@ -22,6 +22,8 @@
     </ul>
 
     <ul id="prices">
+        <h2>200 kr </h2>
+        <h2> 350 kr </h2>
     </ul>
     
     
@@ -55,7 +57,7 @@ main {
     grid-gap: 4rem;
 }
 img {
-    width: 70%;
+    width: 100%;
     height: 70%;
     
     
@@ -67,8 +69,17 @@ img {
     grid-template-rows: repeat(4,1fr);
     
     
+    
 
     
+}
+
+#prices {
+    grid-row: 2/4;
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    justify-content: center;
+
 }
 
 
