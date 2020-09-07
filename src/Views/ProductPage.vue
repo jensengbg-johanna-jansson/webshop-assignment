@@ -6,7 +6,8 @@
     </header>
     <main>
         <ul class="list_products">
-        <Product/>
+            
+        <Product v-for="(product, index) in addProducts" :key="index" :product="product"/>
         <Product/>
         
         </ul>
@@ -33,7 +34,9 @@ export default {
         addProducts() {
        return this.$store.state.products
         }
-    }
+    },
+
+    
 
 
 }

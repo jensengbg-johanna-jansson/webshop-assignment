@@ -10,7 +10,12 @@
 
 <script>
 export default {
-    name: 'Product'
+    name: 'Product',
+
+    props: [
+        product,
+
+    ]
 }
 </script>
 
