@@ -6,10 +6,7 @@
     </header>
     <main>
         <ul class="list_products">
-            
-        <Product v-for="(product, index) in addProducts" :key="index" :product="product"/>
-        <Product/>
-        
+            <Product v-for="(product, index) in addProducts" :key="index" :product="product"/>       
         </ul>
     
     </main>
