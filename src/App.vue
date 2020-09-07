@@ -1,11 +1,17 @@
 <template>
   <div id="app">
+    <mainHeader />
     <router-view />
   </div>
 </template>
 
 <script>
+import mainHeader from '@/components/mainHeader.vue';
+
 export default {
+  components: {
+    mainHeader
+  }
 }
 </script>
 
