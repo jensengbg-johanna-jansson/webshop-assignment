@@ -5,11 +5,7 @@
 </template>
 
 <script>
-import quantityPicker from '@/components/quantityPicker.vue';
 export default {
-  components: {
-    quantityPicker
-  }
 }
 </script>
 
