@@ -1,14 +1,11 @@
 <template>
-<div class="product-main">
-</div>
-
-    
+  <div class="wrapper">
+    <router-link to="/shopping-cart">CART</router-link>
+  </div>
 </template>
 
 <script>
-
-export default {
-    name: 'Home',
-    
-}
+export default {}
 </script>
+
+<style></style>

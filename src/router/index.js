@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ProductPage from '../Views/ProductPage'
 import ProductDetailsPage from '@/views/ProductDetailsPage.vue'
 import Home from '@/views/Home.vue'
 import ShoppingCart from '@/views/ShoppingCart.vue'
@@ -11,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: ProductPage
+    component: Home
   },
   {
     path: '/product/:id',
