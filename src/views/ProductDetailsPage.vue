@@ -66,13 +66,13 @@ export default {
             return isValid;
         },
         isInCart (item) {
-            for (let i = 0; i < this.cartItems.length; i++) {
+            let isAdded = false;
+            for(let i = 0; i < this.cartItems.length; i++) {
                 if (this.cartItems[i] === item) {
-                    return true;
-                } else {
-                    return false;
+                    isAdded = true;
                 }
             }
+            return isAdded;
         },
         async addToCart () {
             if(this.isValidToCartRequest() != false 
@@ -88,6 +88,7 @@ export default {
                         t.showSuccessMsg = false;
                     }, 1500);
                 } else {
+                    console.log(this.isInCart(this.productToCart));
                     this.showErrorMsg = true;
                     let t = this;
                     setTimeout(function () {
