@@ -32,29 +32,23 @@ export default {
     },
     data() {
         return {
-            productToCart: '',
+            size: '',
+            quantity: '',
             showSuccessMsg: false,
             showErrorMsg: false,
             errorMsg: ''
         }
     },
     methods: {
-        setProductToCart() {
-            this.productToCart = {
-                name: this.productData.name,
-                price: this.productData.price,
-                size: null,
-                quantity: null
-            }
-        },
+        
         updateSize(value) {            
-            this.productToCart.size = value;
+            this.size = value;
         },
         updateQuantity(value) {
-            this.productToCart.quantity = value;
+            this.quantity = value;
         }, 
-        isValidToCartRequest() {
-            let productToCartvalues = Object.values(this.productToCart);
+        isValidToCartRequest(toCartObject) {
+            let productToCartvalues = toCartObject;
             let isValid = true;
             let noSize = false;
             console.log(productToCartvalues.size);
@@ -89,7 +83,13 @@ export default {
             return isAdded;
         },
         async addToCart () {
-            let validCartObj = this.isValidToCartRequest();
+            let productToCart = {
+                name: this.productData.name,
+                price: this.productData.price,
+                size: this.size,
+                quantity: this.quantity
+            }
+            let validCartObj = this.isValidToCartRequest(productToCart);
             console.log(validCartObj.noSize);
             if(validCartObj.noSize === true){
                 this.errorMsg = 'Please choose a size';
@@ -103,9 +103,9 @@ export default {
             && validCartObj.isValid != null 
             && validCartObj.isValid != undefined
             ) {
-                await this.$store.dispatch('commitProductToCart', this.productToCart);
+                await this.$store.dispatch('commitProductToCart', productToCart);
                 
-                if(this.isInCart(this.productToCart) === true) {
+                if(this.isInCart(productToCart) === true) {
                     this.showSuccessMsg = true;
                     let t = this;
                     setTimeout(function () {
@@ -138,9 +138,6 @@ export default {
         cartItems () {
             return this.$store.state.cart;            
         }
-    },
-    mounted() {
-        this.setProductToCart();
     }
 }
 </script>
