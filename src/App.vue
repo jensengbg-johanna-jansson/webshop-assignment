@@ -32,4 +32,10 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
+* {
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+}
 </style>
