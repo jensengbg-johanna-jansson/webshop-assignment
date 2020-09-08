@@ -51,7 +51,7 @@ export default {
             let productToCartvalues = toCartObject;
             let isValid = true;
             let noSize = false;
-            console.log(productToCartvalues.size);
+            
             if(productToCartvalues.size === ''
             || productToCartvalues.size === null
             || productToCartvalues.size === undefined) {
@@ -90,7 +90,6 @@ export default {
                 quantity: this.quantity
             }
             let validCartObj = this.isValidToCartRequest(productToCart);
-            console.log(validCartObj.noSize);
             if(validCartObj.noSize === true){
                 this.errorMsg = 'Please choose a size';
                 this.showErrorMsg = true;
