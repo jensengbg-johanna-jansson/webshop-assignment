@@ -2,7 +2,7 @@
   <div class="totalPrice">
     <section class="info">
       <h2>total amount</h2>
-      <p class="price">{{ totalPrice }} SKE</p>
+      <p class="price">{{ totalPrice }} SEK</p>
     </section>
     <button class="cta">check out</button>
   </div>
