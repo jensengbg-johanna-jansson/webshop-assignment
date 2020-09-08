@@ -191,6 +191,7 @@ export default {
                 font-weight: bold;
                 padding: .5rem;
                 width: 100%;
+                transition: 0.3s all ease;
             }
             .add-to-cart-button:hover {
                 background: #f6f6f6;
