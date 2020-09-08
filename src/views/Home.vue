@@ -1,7 +1,5 @@
 <template>
-  <div class="wrapper">
-    <router-link to="/shopping-cart">CART</router-link>
-  </div>
+  <div class="wrapper"></div>
 </template>
 
 <script>
