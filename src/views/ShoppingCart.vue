@@ -1,19 +1,8 @@
 <template>
-  <div class="wrapper">
-    <h1>Shopping cart</h1>
-    <section class="productSection"></section>
-    <TotalValue />
-  </div>
+  <div class="wrapper"></div>
 </template>
 
-<script>
-import TotalValue from '@/components/TotalValue.vue'
-export default {
-  components: {
-    TotalValue,
-  },
-}
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 .wrapper {
