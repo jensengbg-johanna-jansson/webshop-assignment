@@ -8,58 +8,64 @@ export default new Vuex.Store({
     products: [
       {
         id: '1',
-        name: 'A mock parka',
+        name: 'Cat tower hoodie',
         price: 299,
-        img: "https://picsum.photos/id/237/1080/720"
+        img: "/assets/images/cats_hoodie.jpg"
       },
       {
         id: '2',
-        name: 'A mock T-shirt',
+        name: 'Cat tower T-shirt',
         price: 199,
-        img: 'https://picsum.photos/id/237/1080/720'
+        img: "/assets/images/cats_tshirt.jpg"
       },
       {
         id: '3',
-        name: 'Sporty T-shirt',
+        name: 'Like a boss T-shirt',
         price: 199,
-        img: 'https://picsum.photos/id/237/1080/720'
+        img: "/assets/images/boss_tshirt.jpg"
       },
       {
         id: '4',
-        name: 'Sporty parka',
+        name: 'Like a boss hoodie',
         price: 299,
-        img: 'https://picsum.photos/id/237/1080/720'
+        img: "/assets/images/boss_hoodie.jpg"
       },
       {
         id: '5',
-        name: 'Bug stick parka',
+        name: 'Koi fish hoodie',
         price: 299,
-        img: 'https://picsum.photos/id/237/1080/720'
+        img: "/assets/images/koi_hoodie.jpg"
       },
       {
         id: '6',
-        name: 'Bug stick T-shirt',
+        name: 'Koi fish T-shirt',
         price: 199,
-        img: 'https://picsum.photos/id/237/1080/720'
+        img: "/assets/images/koi_tshirt.jpg"
       },
       {
         id: '7',
-        name: 'Rick roll T-shirt',
+        name: 'Coffee T-shirt',
         price: 199,
-        img: 'https://picsum.photos/id/237/1080/720'
+        img: "/assets/images/coffee_tshirt.jpg"
       },
       {
         id: '8',
-        name: 'Rick roll parka',
+        name: 'Coffee hoodiea',
         price: 299,
-        img: 'https://picsum.photos/id/237/1080/720'
+        img: "/assets/images/coffee_hoodie.jpg"
       }
-    ]
+    ],
+    cart: []
   },
   mutations: {
+    addProductToCart (state, payload) {
+        state.cart.push(payload);
+    }
   },
   actions: {
+    commitProductToCart ({commit}, product) {
+      commit('addProductToCart', product);
+    }
   },
-  modules: {
-  }
+  modules: {},
 })

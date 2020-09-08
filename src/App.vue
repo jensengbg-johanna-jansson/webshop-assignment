@@ -1,15 +1,17 @@
 <template>
   <div id="app">
+    <mainHeader />
     <router-view />
-    
   </div>
 </template>
 
 <script>
+import mainHeader from '@/components/mainHeader.vue';
 
 export default {
-  
-  
+  components: {
+    mainHeader
+  }
 }
 </script>
 
@@ -19,6 +21,7 @@ export default {
   margin: 0;
   padding: 0;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
