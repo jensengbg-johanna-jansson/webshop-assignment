@@ -1,10 +1,18 @@
 <template>
   <div class="wrapper">
+      <ProductPage />
   </div>
 </template>
 
 <script>
-export default {}
+import ProductPage from '@/views/ProductPage.vue';
+
+export default {
+    name: 'Home',
+    components: {
+        ProductPage
+    }
+}
 </script>
 
 <style></style>
