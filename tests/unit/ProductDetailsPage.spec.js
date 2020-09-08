@@ -95,10 +95,11 @@ it('should commit a mutation with a payload that corresponds to the currently se
         localVue
     });
     let addToCartButton = wrapper.find('.add-to-cart-button');
-    
-    await wrapper.setData({ productToCart: mockCartData });
+    await wrapper.setData({ size: mockCartData.size });
+    await wrapper.setData({ quantity: mockCartData.quantity });
     await addToCartButton.trigger('click');
-
+    
+    expect(actions.commitProductToCart).toHaveBeenCalled()
     let actual = actions.commitProductToCart.mock.calls[0][1];
 
     expect(actual).toStrictEqual(expected);
