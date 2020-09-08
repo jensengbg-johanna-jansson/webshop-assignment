@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <router-link class="header-logo" to="/">Home</router-link>
+        <router-link class="header-logo" to="/">PrintShirt</router-link>
         <nav class="header-links">
             <router-link class="header-links-item" to="/">Home</router-link>
             <router-link class="header-links-item" to="/">About</router-link>
@@ -31,13 +31,13 @@ export default {
         padding: 0 10vw;
 
         a {
-            text-transform: uppercase;
             font-weight: bold;
             text-decoration: none;        
         }
 
         &-links {
             display: flex;
+            text-transform: uppercase;
 
             &-item {
                 color: #444444;
