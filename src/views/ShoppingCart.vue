@@ -1,8 +1,19 @@
 <template>
-  <div class="wrapper"></div>
+
+  <div class="wrapper">
+    <h1>Shopping cart</h1>
+    <ProductList />
+  </div>
 </template>
 
-<script></script>
+<script>
+import ProductList from '@/components/ProductList.vue'
+export default {
+  components: {
+    ProductList,
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .wrapper {
