@@ -1,8 +1,10 @@
 <template>
     <article class="product" @click="goToProduct">
-        <img class="productImage" :src="product.img">
+        <div class="image-container">
+            <img class="productImage" :src="product.img">
+        </div>
         <h2 class="productName">{{ product.name }}</h2>
-        <h2 class="price">{{ product.price }}</h2>
+        <p class="price">{{ product.price }} SEK</p>
     </article>
 </template>
 
@@ -24,28 +26,35 @@ export default {
 <style lang="scss" scoped>
 
 .product {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem 2rem;
+}
 
+.image-container {
+    width: 15rem;
+    height: 20rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .productImage {
-    width: 12rem;
-    height: 10rem;
+    height: 100%;
 }
 
 .productName {
-    display: flex;
-    align-self: center;
-    justify-self: center;
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: .8rem;
 }
 
 .price {
-    display: flex;
-    align-self: center;
-    justify-self: center;
+    color: #444444;
 }
+
 
 
 
