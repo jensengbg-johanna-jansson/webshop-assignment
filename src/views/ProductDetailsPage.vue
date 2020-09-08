@@ -12,7 +12,7 @@
                     <span class="success-message" v-show="showSuccessMsg">Product was added to cart</span>
                 </transition>
                 <transition name="fade-up">
-                    <span class="error-message" v-show="showErrorMsg">Error: Product could not be added</span>
+                    <span class="error-message" v-show="showErrorMsg">{{ errorMsg }}</span>
                 </transition>
             </div>
             <button class="add-to-cart-button" @click="addToCart">Continue</button>
@@ -34,7 +34,8 @@ export default {
         return {
             productToCart: '',
             showSuccessMsg: false,
-            showErrorMsg: false
+            showErrorMsg: false,
+            errorMsg: ''
         }
     },
     methods: {
@@ -55,15 +56,28 @@ export default {
         isValidToCartRequest() {
             let productToCartvalues = Object.values(this.productToCart);
             let isValid = true;
+            let noSize = false;
+            console.log(productToCartvalues.size);
+            if(productToCartvalues.size === ''
+            || productToCartvalues.size === null
+            || productToCartvalues.size === undefined) {
+                noSize = true;
+            } else {
+                noSize = false;
+            }
             for(let i = 0; i < productToCartvalues.length; i++) {
                 if(productToCartvalues[i] === '' 
                 || productToCartvalues[i] === null
                 || productToCartvalues[i] === undefined 
                 ){
                     isValid = false;
+                } else {
+                    isValid = true;
                 }
             }
-            return isValid;
+            return {isValid: isValid,
+                    noSize: noSize
+                    };
         },
         isInCart (item) {
             let isAdded = false;
@@ -75,9 +89,19 @@ export default {
             return isAdded;
         },
         async addToCart () {
-            if(this.isValidToCartRequest() != false 
-            && this.isValidToCartRequest() != null 
-            && this.isValidToCartRequest() != undefined
+            let validCartObj = this.isValidToCartRequest();
+            console.log(validCartObj.noSize);
+            if(validCartObj.noSize === true){
+                this.errorMsg = 'Please choose a size';
+                this.showErrorMsg = true;
+                let t = this;
+                setTimeout(function () {
+                    t.showErrorMsg = false;
+                }, 1500);
+            } else
+            if(validCartObj.isValid != false 
+            && validCartObj.isValid != null 
+            && validCartObj.isValid != undefined
             ) {
                 await this.$store.dispatch('commitProductToCart', this.productToCart);
                 
@@ -88,7 +112,7 @@ export default {
                         t.showSuccessMsg = false;
                     }, 1500);
                 } else {
-                    console.log(this.isInCart(this.productToCart));
+                    this.errorMsg = 'Error: Could not add product to cart';
                     this.showErrorMsg = true;
                     let t = this;
                     setTimeout(function () {
@@ -96,6 +120,7 @@ export default {
                     }, 1500);
                 }
             } else {
+                this.errorMsg = 'Error: Could not add product to cart';
                 this.showErrorMsg = true;
                 let t = this;
                 setTimeout(function () {
