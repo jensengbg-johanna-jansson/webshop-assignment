@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getTotalPrice: function() {
-      this.cartItems.map((elem) => (this.totalPrice += elem.price))
+      this.$store.state.cart.map((elem) => (this.totalPrice += elem.price))
     },
   },
 }
