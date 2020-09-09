@@ -1,8 +1,16 @@
-import { shallowMount } from '@vue/test-utils'
+import Vuex from 'vuex'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 import TotalValue from '@/components/TotalValue.vue'
 
+const localVue = createLocalVue()
+localVue.use(Vuex)
+
 describe('TotalVale.vue', () => {
-  const wrapper = shallowMount(TotalValue)
+  let store = new Vuex.Store({})
+  const wrapper = shallowMount(TotalValue, {
+    store,
+    localVue,
+  })
 
   it('Should return the sum of the prices', () => {
     const expected = wrapper.vm.totalPrice
