@@ -58,6 +58,12 @@ export default {
 
   .imgCont {
     background: #aaa;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      margin-left: -7.5rem;
+    }
   }
 
   .infoCont {
