@@ -13,14 +13,6 @@ export default {
   data: () => {
     return {
       totalPrice: 0,
-      cartItems: [
-        {
-          name: 'First test product',
-          size: 'M',
-          price: 299,
-          img: '',
-        },
-      ],
     }
   },
   created() {
