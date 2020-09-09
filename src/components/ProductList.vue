@@ -1,16 +1,14 @@
 <template>
-  <div class="productSection">
-    <section class="product" v-for="item in cartItems" :key="item.name">
-      <section class="imgCont"></section>
-      <section class="infoCont">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.price }} SEK</p>
-        <p class="size">{{ item.size }}</p>
-        <QuantityPicker />
-        <button @click="deleteFunc(item)" class="deleteBtn">delete</button>
-      </section>
+  <section class="product">
+    <section class="imgCont"></section>
+    <section class="infoCont">
+      <h3>{{ cartItem.name }}</h3>
+      <p>{{ cartItem.price }} SEK</p>
+      <p class="size">{{ cartItem.size }}</p>
+      <QuantityPicker />
     </section>
-  </div>
+    <button @click="deleteFunc(cartItem)" class="deleteBtn">delete</button>
+  </section>
 </template>
 
 <script>
@@ -24,10 +22,8 @@ export default {
       productToDelete: {},
     }
   },
-  computed: {
-    cartItems() {
-      return this.$store.state.cart
-    },
+  props: {
+    cartItem: Object,
   },
   methods: {
     deleteFunc: function(item) {
@@ -46,6 +42,7 @@ export default {
   align-items: center;
 }
 .product {
+  position: relative;
   width: 24rem;
   height: 18rem;
   margin: 2rem;
@@ -79,23 +76,24 @@ export default {
     .size {
       margin-bottom: 1rem;
     }
+  }
+  .deleteBtn {
+    position: absolute;
+    bottom: 0rem;
+    right: 3.2rem;
+    background: none;
+    border: solid #666 1px;
+    border-radius: 4px;
+    color: #666;
+    padding: 0.4rem 2.4rem;
+    text-transform: uppercase;
+    transition: 0.3s all ease;
+    cursor: pointer;
 
-    .deleteBtn {
-      margin-top: auto;
-      background: none;
-      border: solid #666 1px;
-      border-radius: 4px;
-      color: #666;
-      padding: 0.4rem 2.4rem;
-      text-transform: uppercase;
-      transition: 0.3s all ease;
-      cursor: pointer;
-
-      &:hover {
-        background: #222;
-        border-color: #222;
-        color: #f6f6f6;
-      }
+    &:hover {
+      background: #222;
+      border-color: #222;
+      color: #f6f6f6;
     }
   }
 }
