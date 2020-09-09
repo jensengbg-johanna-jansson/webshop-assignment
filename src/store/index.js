@@ -53,7 +53,16 @@ export default new Vuex.Store({
       },
     ],
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    deleteProdFromCart(state, item) {
+      let index = state.cart.indexOf(item)
+      state.cart.splice(index, 1)
+    },
+  },
+  actions: {
+    deleteProd(ctx, item) {
+      ctx.commit('deleteProdFromCart', item)
+    },
+  },
   modules: {},
 })
