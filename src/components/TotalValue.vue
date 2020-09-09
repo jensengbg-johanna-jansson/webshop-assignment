@@ -10,17 +10,11 @@
 
 <script>
 export default {
-  data: () => {
-    return {
-      totalPrice: 0,
-    }
-  },
-  created() {
-    this.getTotalPrice()
-  },
-  methods: {
-    getTotalPrice: function() {
-      this.$store.state.cart.map((elem) => (this.totalPrice += elem.price))
+  computed: {
+    totalPrice() {
+      let totalPrice = 0
+      this.$store.state.cart.map((elem) => (totalPrice += elem.price))
+      return totalPrice
     },
   },
 }
@@ -31,7 +25,8 @@ export default {
   width: 100%;
   max-height: 10rem;
   padding: 2rem 6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
