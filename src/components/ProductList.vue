@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     deleteFunc: function(item) {
-      this.productToDelete = item
+      this.productToDelete.push(item)
       console.log(this.productToDelete)
       this.$store.dispatch('deleteProd', item)
     },
