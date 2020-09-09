@@ -17,6 +17,13 @@ Avgränsningar:
 	Webbshopen ska sälja kläder
 	Vi använder VueX och store för lagring av data
 
+** Obs! **
+    Pågrund av ett fel som uppkom vid en pull request av en av brancherna som skulle in i vår dev branch
+    (vi hade en mapp som hette Views och en views, stor och liten bokstav, som windiws/mac tolkade som samma mapp)
+    har en del filer som Albin skrev skrivits över med Johanna som den som gjort filerna/commits. detta pga att Johanna som fixade
+    med problemet blev tvungen att skapa filerna på nytt då de inte kom med. Det är Albin som haft huvudansvar för filerna;
+    ProductPage.vue och product.vue, även om det står på gitHub att Johanna har lagt till/ändrat i filerna.
+
 Anteckningar från retrospective: 
     Vad har ni lärt er av projektet?
         Skriva test är svårt, och känns som något man behöver träna mycket på för att bli riktigt bra.
@@ -32,7 +39,7 @@ Anteckningar från retrospective:
         Lägga upp en tydlig plan för när olika saker ska vara klara så alla jobbar mot samma mål.
     
     Vad skulle vi sluta göra?
-        
+        Vi kan inte komma på något speciellt vi skulle sluta göra       
 
     Vad skulle vi fortsätta göra?
         Tilldela alla gruppmedlemmar ansvarsområden, känns som att arbetet flyter på bra när man har
