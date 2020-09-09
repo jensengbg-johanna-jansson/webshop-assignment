@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <h1>Shopping cart</h1>
     <div class="productSection">
       <ProductList
         v-for="item in cartItems"
@@ -8,14 +7,17 @@
         :cartItem="item"
       />
     </div>
+    <TotalValue />
   </div>
 </template>
 
 <script>
 import ProductList from '@/components/ProductList.vue'
+import TotalValue from '@/components/TotalValue.vue'
 export default {
   components: {
     ProductList,
+    TotalValue,
   },
   computed: {
     cartItems() {
@@ -27,7 +29,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  max-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
