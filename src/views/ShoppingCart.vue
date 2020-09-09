@@ -8,6 +8,7 @@
         :cartItem="item"
       />
     </div>
+    <TotalValue />
   </div>
 </template>
 
@@ -18,11 +19,6 @@ export default {
   components: {
     ProductList,
     TotalValue,
-  },
-  computed: {
-    cartItems() {
-      return this.$store.state.cart
-    },
   },
   computed: {
     cartItems() {
