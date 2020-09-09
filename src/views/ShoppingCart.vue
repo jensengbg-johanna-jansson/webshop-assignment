@@ -1,7 +1,13 @@
 <template>
   <div class="wrapper">
     <h1>Shopping cart</h1>
-    <ProductList />
+    <div class="productSection">
+      <ProductList
+        v-for="item in cartItems"
+        :key="item.name"
+        :cartItem="item"
+      />
+    </div>
   </div>
 </template>
 
@@ -10,6 +16,11 @@ import ProductList from '@/components/ProductList.vue'
 export default {
   components: {
     ProductList,
+  },
+  computed: {
+    cartItems() {
+      return this.$store.state.cart
+    },
   },
 }
 </script>
