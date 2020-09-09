@@ -50,6 +50,7 @@ export default {
            height: 2rem;
            font-size: 1rem;
            margin-right: 1rem;
+           transition: 0.2s all ease;
         }
         &-label:last-child {
             margin-right: 0;

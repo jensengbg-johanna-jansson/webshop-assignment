@@ -1,0 +1,19 @@
+Kravspec:
+    Ska gå att se alla produkter som finns på en sida
+    Ska kunna se en specifik produkts detaljer på en produktsida
+    Ska gå att lägga till och ta bort produkter i en varukorg
+    Ska gå att se totala värdet av produkter som finns i varukorgen
+    Ska gå att se vilka produkter man lagt i varukorgen
+
+User Stories:
+Som en användare vill jag ha en sida med alla produkter som finns så att jag kan få en överblick över vad som går att köpa
+Som en användare vill jag se namn och bilder på produkterna i produktlistan så att jag kan se vad det är för produkter
+Som en användare vill jag kunna se alla produktdetaljer så att jag vet mer exakt vad det är för produkt
+Som en användare vill jag kunna välja storlek på produktsidan så att jag kan köpa en produkt som passar mig
+Som en användare vill jag kunna välja antal på produktsidan så att kan lägga till så många av produkten som jag behöver i kundvagnen
+Som en användare vill jag kunna lägga till en produkt i en varukorg så att jag kan samla allt jag vill köpa på ett ställe
+Som en användare vill jag kunna se i varukorgen vilka produkter som ligger där så att jag vet vad jag har lagt till
+Som en användare vill jag kunna ta bort en produkt från varukorgen så att jag inte behöver köpa något jag inte längre vill köpa
+Som en användare vill jag kunna se hur många av varje produkt som ligger i varukorgen inne i varukorgen så att jag kan besluta om jag behöver lägga till eller ta bort produkter
+Som en användare vill jag kunna se det totala värdet av min varukorg inne i varukorgen så att jag vet hur mycket det kommer kosta innan jag går vidare till checkout
+Som en användare vill jag kunna se hur många produkter som ligger i varukorgen utan att behöva gå in i varukorgen så att jag hela tiden kan hålla koll på hur mycket jag handlar

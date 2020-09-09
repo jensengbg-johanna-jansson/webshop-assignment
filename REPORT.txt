@@ -1,0 +1,47 @@
+Grupp 8
+Gruppmedlemmar: Albin Sander, Ali Suliman, Johanna Jansson
+Klass: FRK19G
+
+GitHub Repo: https://github.com/jensengbg-johanna-jansson/webshop-assignment
+Trello: https://trello.com/b/apKafa9L/webshop
+Figma: https://www.figma.com/file/xWjIdVFrYNYePnnkGpzcjp/Untitled?node-id=0%3A1
+Kravspec: i filen "kravspec.txt"
+
+Avgränsningar:
+    Webbsidan avgränsas till följande sidor:
+    Home som listar alla produkter
+    Produktsida som listar en enskild produkts detaljer
+    Cart som visar alla produkter som lagts till i kundvagnen
+
+Övriga överenskommelser: 
+	Webbshopen ska sälja kläder
+	Vi använder VueX och store för lagring av data
+
+Anteckningar från retrospective: 
+    Vad har ni lärt er av projektet?
+        Skriva test är svårt, och känns som något man behöver träna mycket på för att bli riktigt bra.
+        Det är viktigt att ha en klar bild av VAD det är man ska testa. Kändes som att det var väldigt lätt att börja skriva test 
+        för något som man egentligen inte behövde testa eller att skriva onödigt komplicerade test.
+
+    Arbetsfördelning:
+        Varje gruppmedlem fick ansvar för varsin huvudsida (Home, Productsida, Cart)
+    
+    Fundera över vilka ändringar ni skulle göra om ni skulle fortsätta med projektet i samma grupp:
+    Vad skulle vi börja göra?
+        Kommunicera mer och definiera mer konkret när och hur vi ska kommunicera.
+        Lägga upp en tydlig plan för när olika saker ska vara klara så alla jobbar mot samma mål.
+    
+    Vad skulle vi sluta göra?
+        
+
+    Vad skulle vi fortsätta göra?
+        Tilldela alla gruppmedlemmar ansvarsområden, känns som att arbetet flyter på bra när man har
+        sitt eget ansvarsområde att fokusera på.
+
+    Vilka krav var svårast respektive lättast att skriva test för?
+        De svåraste testen att skriva var de som involverade element som använde sig av vuex.
+
+    Fanns det något ni hade tänkt göra, som ni inte hann med? Vad berodde det på?
+        På slutet fanns väldigt lite tid till att genomföra en slutkontroll av hemsida, för att kontrollera att
+        allt ser bra ut och fungerar som det ska. Otillräcklig kommunikation och tidsplanering var den största
+        anledningen till att det blev tight med tid på slutet.
