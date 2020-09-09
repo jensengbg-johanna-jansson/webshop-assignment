@@ -1,6 +1,8 @@
 <template>
   <section class="product">
-    <section class="imgCont"></section>
+    <section class="imgCont">
+      <img :src="cartItem.img" alt="" />
+    </section>
     <section class="infoCont">
       <h3>{{ cartItem.name }}</h3>
       <p>{{ cartItem.price }} SEK</p>
