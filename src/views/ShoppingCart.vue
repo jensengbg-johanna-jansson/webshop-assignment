@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1>Shopping cart</h1>
+    <h2>Shopping cart</h2>
     <div class="productSection">
       <ProductList
         v-for="item in cartItems"
@@ -44,7 +44,7 @@ export default {
   .productSection {
     width: 100%;
     margin-top: auto;
-    margin: 3rem 0rem 2rem 0rem;
+    margin: 3rem 0rem 0rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
