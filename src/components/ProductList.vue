@@ -21,23 +21,19 @@ export default {
   },
   data: () => {
     return {
-      cartItems: [
-        { name: 'First Test Product', size: 'M', price: 199, img: '' },
-        { name: 'Second Test Product', size: 'L', price: 399, img: '' },
-        { name: 'Third Test Product', size: 'S', price: 599, img: '' },
-      ],
       productToDelete: {},
     }
+  },
+  computed: {
+    cartItems() {
+      return this.$store.state.cart
+    },
   },
   methods: {
     deleteFunc: function(item) {
       this.productToDelete = item
       console.log(this.productToDelete)
-      this.cartItems.map((elem) => {
-        if (elem.name === this.productToDelete.name) {
-          this.cartItems.splice(this.cartItems.indexOf(elem), 1)
-        }
-      })
+      this.$store.dispatch('deleteProd', item)
     },
   },
 }
