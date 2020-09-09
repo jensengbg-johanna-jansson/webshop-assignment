@@ -20,7 +20,7 @@ export default {
     },
     methods: {
         goToCart () {
-            this.$router.push({ path: 'shopping-cart' });
+            this.$router.push({ path: '/shopping-cart' });
         }
     }
 }

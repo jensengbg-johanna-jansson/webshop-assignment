@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h2>MY PRODUCTS</h2>
+    <h1>Shopping cart</h1>
     <div class="productSection">
       <ProductList
         v-for="item in cartItems"
@@ -8,7 +8,6 @@
         :cartItem="item"
       />
     </div>
-    <TotalValue />
   </div>
 </template>
 
@@ -19,6 +18,11 @@ export default {
   components: {
     ProductList,
     TotalValue,
+  },
+  computed: {
+    cartItems() {
+      return this.$store.state.cart
+    },
   },
   computed: {
     cartItems() {
