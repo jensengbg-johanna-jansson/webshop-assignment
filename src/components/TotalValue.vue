@@ -20,18 +20,6 @@ export default {
           price: 299,
           img: '',
         },
-        {
-          name: 'First test product',
-          size: 'M',
-          price: 299,
-          img: '',
-        },
-        {
-          name: 'First test product',
-          size: 'M',
-          price: 299,
-          img: '',
-        },
       ],
     }
   },
