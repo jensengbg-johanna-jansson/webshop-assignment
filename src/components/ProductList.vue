@@ -32,7 +32,6 @@ export default {
   methods: {
     deleteFunc: function(item) {
       this.productToDelete = item
-      console.log(this.productToDelete)
       this.cartItems.map((elem) => {
         if (elem.name === this.productToDelete.name) {
           this.cartItems.splice(this.cartItems.indexOf(elem), 1)

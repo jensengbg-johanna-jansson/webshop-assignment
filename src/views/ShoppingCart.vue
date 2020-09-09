@@ -1,4 +1,5 @@
 <template>
+
   <div class="wrapper">
     <h1>Shopping cart</h1>
     <ProductList />

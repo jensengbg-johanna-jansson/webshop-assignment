@@ -65,6 +65,7 @@ export default {
             height: 2rem;
             font-size: 1rem;
             color: #ffffff;
+            transition: 0.2s all ease;
         }
         &-button:hover {
             background: #ffffff;
