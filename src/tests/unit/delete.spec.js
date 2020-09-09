@@ -5,17 +5,26 @@ import ProductList from '@/components/ProductList.vue'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
+const mockProductData = {
+  name: 'A mock T-shirt',
+  price: 299,
+  img: 'https://picsum.photos/id/237/200/300',
+}
+
 describe('Delete product', () => {
   it('Should delete the clicked item', async () => {
     const expected = -1
     let store = new Vuex.Store({})
 
     const wrapper = mount(ProductList, {
+      propsData: {
+        item: mockProductData,
+      },
       store,
       localVue,
     })
 
-    const deleteBtn = wrapper.find('button')
+    const deleteBtn = wrapper.find('.deleteBtn')
     console.log(deleteBtn)
     // await deleteBtn.trigger('click')
     const productToDelete = wrapper.vm.productToDelete
